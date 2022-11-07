@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Original+Surfer&family=Righteous&family=Shrikhand&family=Sigmar+One&display=swap');
+
+    /*
+fontfamilies of this import-----///////
+
+font-family: 'Audiowide', cursive;
+font-family: 'Original Surfer', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Shrikhand', cursive;
+font-family: 'Sigmar One', cursive;
+
+----------//////-------*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Maven pro', sans-serif
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: 'Original Surfer', cursive;
+    }
+
+    section {
+      width: 100vw;
+      height: 120%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #16FAFF;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0px 0px 15px #ddd;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .form_group {
+      width: 100%;
+      font-size: 1.5rem;
+      margin-top: 8px;
+    }
+    
+    .form_group lable{
+      font-family: 'Original Surfer', cursive;
+      color: #333;
+    }
+
+    .form_group input,
+    .form_group textarea {
+      width: 100%;
+      padding: 5px;
+      font-size: 1.3rem;
+      border: 2px solid #E7E8E8;
+      outline: none;
+      font-family: sans-serif;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.7rem;
+      font-family: 'Righteous', cursive;
+      color: #16C1FF;
+      margin-top: 1rem;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #2BC6FF;
+      color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+    
+    #section .anch{
+      pointer-events: none;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    #status {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 8px;
+      text-align: center;
+      padding: 10px;
+      margin: 10px auto;
+      font-size: 1.4rem;
+      font-family: 'Righteous', cursive;
+    }
+
+    #status.success {
+      background-color: #46F538;
+      color: #000;
+      pointer-events: all;
+      
+    }
+
+    #status.error {
+      background-color: #FA4343;
+      color: #fff;
+      pointer-events: none;
+      animation: error 4s ease forwards;
+    }
+
+    @keyframes error {
+      0% {
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      90% {
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      100% {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="section">
+    <div class="container">
+      <form action="https://formspree.io/f/xoqypnaa" method="POST" id="my-form">
+        <div class="form_group">
+          <lable for="firstName">First Name</lable>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form_group">
+          <lable for="lastName">Last Name</lable>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form_group">
+          <lable for="class">Class</lable>
+          <input type="number" id="class" name="class" required>
+        </div>
+        <div class="form_group">
+          <lable for="fatherName">Father's Name</lable>
+          <input type="text" id="fatherName" name="fatherName" required>
+        </div>
+        <div class="form_group">
+          <lable for="mobileNumber">Mobile No.</lable>
+          <input type="number" id="mobileNumber" name="mobileNumber" placeholder="+91" required>
+        </div>
+        <div class="form_group">
+          <lable for="email">Email</lable>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form_group">
+          <lable for="address">Address</lable>
+          <input type="address" id="address" name="address" placeholder="vill , dist , state" required>
+          <div class="form_group">
+            <lable for="message"> Message</lable>
+            <textarea name="message" id=message rows="8" cols="40">
+
+      </textarea>
+          </div>
+          <button type="submit">submit</button>
+      </form>
+    </div>
+  <a href="https://skilloo-coder.github.io/MAAFI_Learning_Center.com/" class="anch"> <div id="status"></div></a>
+  </section>
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var section = document.getElementById("section");
+      
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.classList.add('success');
+        status.innerHTML = "success! click here for next";
+        section.style.pointerEvents="all";
+        
+        form.reset()
+      }).catch(error => {
+        status.classList.add('error');
+        status.innerHTML = "Oops! There was a problem submitting your form";
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
+</body>
+
+</html>

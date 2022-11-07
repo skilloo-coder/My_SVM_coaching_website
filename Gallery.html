@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #preloader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: #fff url(loader.gif) no-repeat center;
+      z-index: 9999;
+    }
+
+
+    body {
+      background: #fff;
+      text-decoration: none;
+    }
+
+    .container {
+      display: inline-flex;
+      list-style: none;
+      align-items: center;
+      /* background:rgb(76,175,80);*/
+      background: #4caf50;
+      background-blend-mode: darken;
+      border-bottom: 3px solid black;
+      width: 100vw;
+      height: 2.8rem;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 35vw;
+      height: 100%;
+    }
+
+    .logo li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      padding-left: 1rem;
+      color: #fff;
+      letter-spacing: 4px;
+      font-family: sans-serif;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 65vw;
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+
+    .menu li a {
+      padding: .5rem .5rem;
+      transition: all 0.5s linear;
+    }
+
+    .menu li a:hover {
+      background: deepskyblue;
+      color: #626262;
+    }
+
+    .container a {
+      text-decoration: none;
+      -webkit-text-stroke-width: 2px;
+      color: #333;
+    }
+
+    .container li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0rem;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: #333;
+      height: 100%;
+    }
+
+    .container i {
+      -webkit-text-stroke-width: 0px;
+      margin-right: 0.8rem;
+    }
+
+
+    /*------section--------*/
+    /*section{
+        display: grid;
+        grid-template-columns: 48vw 52vw;
+        justify-content: space-around;
+      }
+      
+      section img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 10em;
+        margin: 1.5rem;
+        border: 2px solid black;
+      }*/
+    .main-section {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0px 40px 0px
+    }
+
+    .main-section .galleryHeading {
+      margin-bottom: 50px;
+      border-bottom: 5px solid #A31830;
+      width: 40%;
+    }
+
+    .main-section .galleryHeading h2 {
+      font-size: 2rem;
+      font-family: 'Otomanopee One', sans-serif;
+      color: #626262;
+      padding: 10px 0px;
+    }
+
+    .main-section .galleryHeading h2 span {
+      font-family: sans-serif;
+      font-size: 2.5rem;
+      color: #626262;
+    }
+
+    .main-section .everyImages {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0px 33px;
+      width: 100%;
+    }
+
+    .main-section .everyImages .Images {
+      display: flex;
+      flex-direction: column;
+      width: 32.5%;
+    }
+
+    .main-section .everyImages .Images img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid black;
+    }
+
+    /*---footer----*/
+
+    .foot {
+      -webkit-text-stroke-width: 0.8px;
+      background: #4caf50;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      border-top: 3px solid black;
+      font-family: sans-serif;
+    }
+
+    .foot .s-links {
+      display: flex;
+      justify-content: center;
+      margin: 0rem 5rem;
+      align-items: center;
+    }
+
+    .foot .s-links i {
+      margin: 1rem 2rem;
+      font-size: 1.5rem;
+      background: #FFFFFF70;
+      padding: 1rem;
+      border-radius: 50%;
+      box-shadow: 1px 0px 50px 0.5px #fff;
+      transition: all .3s linear;
+    }
+
+    .foot .s-links i:hover {
+      transform: translateY(-10px);
+    }
+
+    .foot .s-links .fa-facebook {
+      color: #1A2CF2;
+      padding: 1rem 1.3rem;
+    }
+
+    .foot .s-links .fa-instagram {
+      color: #E135F1;
+    }
+
+    .foot .s-links .fa-twitter {
+      color: #0087FF;
+    }
+
+    .foot .s-links .fa-youtube {
+      color: red;
+    }
+
+    .social-media-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 0rem 0rem 0rem;
+    }
+
+    hr {
+      width: 20%;
+      position: absolute;
+      left: 40%;
+    }
+
+    .foot span {
+      color: gold;
+      letter-spacing: 1px;
+    }
+
+    /*---------media-quiries----------*/
+    @media(max-width:768px) {
+      html {
+        font-size: 50%
+      }
+
+      .logo li a {
+        letter-spacing: 1px;
+        font-family: sans-serif;
+      }
+
+      .container {
+        border-bottom: 2px solid black;
+        height: 3.4rem;
+      }
+
+      .container a {
+        -webkit-text-stroke-width: 0.5px;
+      }
+
+      .menu li {
+        letter-spacing: 0.5px;
+        font-family: sans-serif;
+      }
+
+      .menu li a:hover {
+        border-radius: 10px;
+        color: #626262;
+      }
+
+      /*------section--------*/
+      .main-section {
+        margin: 20px 0px 20px 0px;
+      }
+
+      .main-section .galleryHeading {
+        margin-bottom: 30px;
+        border-bottom: 2.3px solid #A31830;
+        width: 50%;
+      }
+
+      .main-section .galleryHeading h2 {
+        padding: 2.7px 0px;
+      }
+
+      .main-section .everyImages {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .main-section .everyImages .Images {
+        width: 100%;
+      }
+
+      .main-section .everyImages .Images img {
+        width: 100%;
+      }
+
+      /*------footer--------*/
+      .foot {
+        -webkit-text-stroke-width: .5px;
+        border-top: 2px solid black;
+        font-family: sans-serif;
+      }
+
+      .foot .s-links i {
+        margin: 1.5rem 1rem;
+        background: #FFFFFF70;
+        box-shadow: 1px 0px 20px 0.5px #fff;
+      }
+
+      hr {
+        width: 30%;
+        position: absolute;
+        left: 35%;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body onload="myFunction()">
+
+  <div id="preloader">
+  </div>
+
+  <nav class="container">
+    <div class="logo">
+      <li><a href="index.html">MY SVM</a></li>
+
+    </div>
+    <div class="menu">
+      <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+      <li><span><a href="#"><i class="fa fa-image"></i>Gallery</a></span></li>
+      <li><a href="mailto:sujeetkgupta5263@gmail.com?subject=my problems&body=write your problems"><i class="fa fa-envelope"></i>Contact Us</a></li>
+    </div>
+  </nav>
+
+  <section class="main-section">
+
+    <div class="galleryHeading">
+      <h2>Photo <span>Gallery</span></h3>
+    </div>
+
+    <div class="everyImages">
+
+      <div class="Images">
+
+        <img src="sushil1.jpg">
+        <img src="sushil2.jpg" alt="Sushil-sir">
+        <img src="sushil3.jpg">
+        <img src="sushil4.jpg">
+        <img src="sushil5.jpg">
+        <img src="sushil6.jpg">
+        <img src="sushil7.jpg">
+        <img src="sushil8.jpg">
+      </div>
+
+      <div class="Images">
+        <img src="sushil9.jpg">
+        <img src="sushil10.jpg">
+        <img src="sushil11.jpg" alt="Sushil-sir">
+        <img src="sushil12.jpg">
+        <img src="sushil13.jpg">
+        <img src="sushil14.jpg">
+        <img src="sushil15.jpg">
+        <img src="sushil16.jpg">
+        <img src="sushil17.jpg">
+      </div>
+
+      <div class="Images">
+        <img src="sushil18.jpg" alt="Sushil-sir">
+        <img src="sushil19.jpg">
+        <img src="sushil20.jpg">
+        <img src="sushil21.jpg">
+        <img src="sushil22.jpg">
+        <img src="sushil23.jpg">
+        <img src="sushil24.jpg">
+        <img src="sushil25.jpg">
+        <img src="sushil26.jpg">
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="foot">
+    <p class="social-media-links">Important&nbsp;<span>links</span></p>
+    <hr color="#fff">
+    <div class="s-links" style="font-size: 2rem;">
+      <a href="https://www.facebook.com/sujeet.krgupta.921" target="_ayush"><i class="fa fa-facebook"></i></a>
+      <a href="https://instagram.com/sujeet.krgupta.921?utm_medium=copy_link" target="_ayush"><i class="fa fa-instagram"></i></a>
+      <a href="https://twitter.com/Ayush43173433?s=08" target="_ayush"><i class="fa fa-twitter"></i></a>
+      <a href="" target="_ayush"><i class="fab fa-youtube"></i></a>
+    </div>
+    <center> copyright 2022 &copy; <span>MY S.V.M</span></center>
+  </footer>
+
+  <script>
+    var slack = document.getElementById('preloader');
+
+    function myFunction() {
+      preloader.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
