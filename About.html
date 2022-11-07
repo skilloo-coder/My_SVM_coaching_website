@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery</title>
+  <title>About us</title>
+
 
   <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
 
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
 
   <style>
@@ -110,71 +113,55 @@
 
 
     /*------section--------*/
-    /*section{
-        display: grid;
-        grid-template-columns: 48vw 52vw;
-        justify-content: space-around;
-      }
-      
-      section img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width: 10em;
-        margin: 1.5rem;
-        border: 2px solid black;
-      }*/
-    .main-section {
-      width: 100%;
-      text-align: center;
+
+    section {
+      min-height: 85vh;
+      max-height: 100vh;
+      width: 100vw;
+      padding: 1em;
+      background: #57505D;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 40px 0px 40px 0px
     }
 
-    .main-section .galleryHeading {
-      margin-bottom: 50px;
-      border-bottom: 5px solid #A31830;
-      width: 40%;
-    }
-
-    .main-section .galleryHeading h2 {
-      font-size: 2rem;
-      font-family: 'Otomanopee One', sans-serif;
-      color: #626262;
-      padding: 10px 0px;
-    }
-
-    .main-section .galleryHeading h2 span {
+    section .art1 {
+      min-height: 50vh;
+      max-height: 100vh;
+      width: 70vw;
+      background: transparent;
+      margin-right: 1rem;
+      font-size: 1.5rem;
       font-family: sans-serif;
-      font-size: 2.5rem;
-      color: #626262;
+      color: #fff;
+      padding: .5rem;
+    }
+    
+    section .art1 .para1{
+      text-align: justify;
     }
 
-    .main-section .everyImages {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0px 33px;
-      width: 100%;
+    section .art1 .dcName {
+      text-align: right;
     }
 
-    .main-section .everyImages .Images {
-      display: flex;
-      flex-direction: column;
-      width: 32.5%;
+    section .art2 {
+      min-height: 25vh;
+      max-height: auto;
+      width: 30vw;
+      padding: .5em;
+      background: transparent;
     }
 
-    .main-section .everyImages .Images img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      border: 1px solid black;
+
+    section .art2 img {
+      height: 20vh;
+      width: 27vw;
+      padding: 0em;
+      border: 2px 2 black;
     }
+
+
+
+
 
     /*---footer----*/
 
@@ -276,32 +263,8 @@
       }
 
       /*------section--------*/
-      .main-section {
-        margin: 20px 0px 20px 0px;
-      }
 
-      .main-section .galleryHeading {
-        margin-bottom: 30px;
-        border-bottom: 2.3px solid #A31830;
-        width: 50%;
-      }
 
-      .main-section .galleryHeading h2 {
-        padding: 2.7px 0px;
-      }
-
-      .main-section .everyImages {
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .main-section .everyImages .Images {
-        width: 100%;
-      }
-
-      .main-section .everyImages .Images img {
-        width: 100%;
-      }
 
       /*------footer--------*/
       .foot {
@@ -324,7 +287,6 @@
 
     }
   </style>
-
 </head>
 
 <body onload="myFunction()">
@@ -339,57 +301,24 @@
     </div>
     <div class="menu">
       <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
-      <li><span><a href="#"><i class="fa fa-image"></i>Gallery</a></span></li>
+      <li><span><a href="Gallery.html"><i class="fa fa-image"></i>Gallery</a></span></li>
       <li><a href="mailto:sujeetkgupta5263@gmail.com?subject=my problems&body=write your problems"><i class="fa fa-envelope"></i>Contact Us</a></li>
     </div>
   </nav>
 
-  <section class="main-section">
 
-    <div class="galleryHeading">
-      <h2>Photo <span>Gallery</span></h3>
-    </div>
-
-    <div class="everyImages">
-
-      <div class="Images">
-
-        <img src="Sushil1.jpg">
-        <img src="Sushil2.jpg" alt="Sushil-sir">
-        <img src="Sushil3.jpg">
-        <img src="Sushil4.jpg">
-        <img src="sushil5.jpg">
-        <img src="sushil6.jpg">
-        <img src="sushil7.jpg">
-        <img src="sushil8.jpg">
+  <section>
+    <article class="art1">
+      <p class="para1">
+        Dear students, I am the director of My SVM coaching centre. I am here to teach you and motivate you. Have a nice day ! Thank you
+      <div class="dcName">
+        — By Sushil Jaiswal
       </div>
-
-      <div class="Images">
-        <img src="sushil9.jpg">
-        <img src="sushil10.jpg">
-        <img src="sushil11.jpg" alt="Sushil-sir">
-        <img src="sushil12.jpg">
-        <img src="sushil13.jpg">
-        <img src="sushil14.jpg">
-        <img src="sushil15.jpg">
-        <img src="sushil16.jpg">
-        <img src="sushil17.jpg">
-      </div>
-
-      <div class="Images">
-        <img src="sushil18.jpg" alt="Sushil-sir">
-        <img src="sushil19.jpg">
-        <img src="sushil20.jpg">
-        <img src="sushil21.jpg">
-        <img src="sushil22.jpg">
-        <img src="sushil23.jpg">
-        <img src="sushil24.jpg">
-        <img src="sushil25.jpg">
-        <img src="sushil26.jpg">
-      </div>
-
-    </div>
-
+      </p>
+    </article>
+    <article class="art2">
+      <p class="para2"><img src="Sushil4.jpg" alt="SUSHIL JAISWAL"></p>
+    </article>
   </section>
 
   <footer class="foot">
@@ -403,6 +332,7 @@
     </div>
     <center> copyright 2022 &copy; <span>MY S.V.M</span></center>
   </footer>
+
 
   <script>
     var slack = document.getElementById('preloader');
