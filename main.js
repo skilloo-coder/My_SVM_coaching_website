@@ -1,4 +1,4 @@
-console.log('MAAFI Learning Center');
+console.log('MY SVM MATHEMATICS TURNING POINT');
 
 function myfunction() {
   var showhide = document.getElementById('mylinks');

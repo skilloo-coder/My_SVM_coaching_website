@@ -1,8 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;600;700&display=swap');
+
+/*
+fontfamilies of above import-----///////
+
+font-family: 'Oswald', sans-serif;  
+font-family: 'Noto Sans JP', sans-serif;
+
+----------//////-------*/
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@400;500;600;700;800;900&family=Ubuntu:wght@400;500;700&display=swap');
+
+/*******##############📤📤📤###############******
+:::::::font::::families:::of::above::import::::
+
+font-family: 'Genos', sans-serif;
+
+font-family: 'Ubuntu', sans-serif;
+
+*****#############################********/
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Maven pro', sans-serif
+  font-family: 'Maven pro', sans-serif;
+
 }
 
 #preloader {
@@ -20,22 +42,27 @@
 }
 
 .fa*/
+/*****media quiries---min-width:769px*********/
+@media (min-width:769px) {
+  .mobile-container {
+    max-width: 100%;
+    color: white;
+    background: url('lap.jpeg');
+    background-size: cover;
 
-.mobile-container {
-  max-width: 100%;
-  background: #555;
-  color: white;
-
-}
+  }
 
 
-.topnav {
-  overflow: hidden;
-  background: #333;
-  position: relative;
-}
+  .topnav {
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    display: flex;
+    height: 2.3rem;
+    width: 100vw;
+  }
 
-/*
+  /*
 .topnav img{
   height: 70px;
   width: 70px;
@@ -43,72 +70,113 @@
   padding: 0;
 }*/
 
-.topnav #mylinks {
-  display: none;
-}
+  .topnav #mylinks {
+    height: auto;
+    background: #333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0rem;
+    left: 10rem;
+  }
 
-.topnav a {
-  color: white;
-  padding: 8px 2rem;
-  text-decoration: none;
-  font-size: 4rem;
-  display: block;
-}
+  .topnav a {
+    color: white;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+  }
 
-.topnav a.icon {
-  background: #333;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 9rem;
+  .topnav a.icon {
+    background: #333;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 9rem;
 
-}
-
-.active {
- 
-  background: #4caf50;
-  color: white;
-}
+  }
 
 
+  .topnav a:hover {
+    background: #4caf50;
+    color: #333;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.topnav a:hover {
-  background: #333;
-  color: white;
-}
+  div.topnav div.logo_svm {
+    background: #333;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #4caf50;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    height: 100%;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-a.active {
+  /*******
+.logo_svm:hover{
+  color: #fff;
   -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: white;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 5px;
+  -webkit-text-stroke-color: #fff;
 }
-
+*******/
+  /******
 .topnav .fa-bars {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+*****/
+  #mylinks i {
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+  }
 
-#mylinks i {
-  font-size: 2.5rem;
-  padding-right: 1rem;
-}
+  #mylinks a {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+  }
 
-#mylinks a {
-  font-size: 3rem;
-}
+  .topnav #mylinks a.login_btn {
+    background: red;
+    padding: 8px 12px;
+    color: #fff;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #fff;
+    letter-spacing: 1.2px;
+    transition: 0.5s;
+  }
 
-/*
+  .topnav #mylinks a.login_btn:hover {
+    color: #ff0000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ff0000;
+    background: #333;
+  }
+
+  /*
 .body{
  min-height: 400px;
  max-height: 5000px;
 }
 */
-/*
+  /*
 .body1 img{
   background: url('lap.jpeg');
   background-size: cover;
@@ -118,195 +186,222 @@ a.active {
 }
 */
 
-section .H {
-  height: 100vh;
-  /* border: 2px solid black;*/
-  color: #333;
-  /*  background: #4caf50;*/
-  background: url('lap.jpeg');
-  background-blend-mode: darken;
-  background-size: 100% 100%;
-  padding: 50% 10%;
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
+  /***************section*********/
 
-section h1 {
-  font-size: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  section {
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 200vh;
+    display: flex;
+    flex-direction: column;
+    /****** justify-content: initial;*******/
+    align-items: center;
 
-section h6 {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.8rem;
-}
-
-section h5 {
-  text-align: justify;
-  font-size: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-section h5 span {
-  text-align: right;
-  display: flex;
-  justify-content: right;
-  align-content: center;
-  position: absolute;
-  top: 200px;
-  right: 0px;
-}
-
-.mobile-container .foot {
-  width: 100%;
-  height: 4rem;
-  background: #4caf50;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: white;
-  /* font-size: 2rem;*/
-  border-top: 2px solid black;
-}
-
-.mobile-container .foot .copyright {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  /* font-size: 2rem;*/
-  letter-spacing: 2px;
-  -webkit-text-stroke-width: 0.1px;
-  padding: 0;
-}
-
-.mobile-container .foot .copyright p {
-  font-size: 3rem;
-}
-
-.mobile-container .foot .s-links {
-  display: flex;
-  justify-content: left;
-  margin: 0rem 0.5rem;
-  align-items: center;
-}
-
-.mobile-container .foot .s-links i {
-  margin: 0rem 2rem;
-  font-size: 2.5rem;
-}
-
-.mobile-container .foot .s-links .fa-facebook {
-  color: #1A2CF2;
-}
-
-.mobile-container .foot .s-links .fa-instagram {
-  color: #E135F1;
-}
-
-.mobile-container .foot .s-links .fa-twitter {
-  color: #0087FF;
-}
-
-.mobile-container .foot .s-links .fa-youtube-play {
-  color: red;
-}
-
-/*--------media quiries---------------*/
-
-@media (max-width:768px) {
-  html {
-    font-size: 70%;
   }
 
-  /*----this is header-------*/
 
-  .topnav a {
-    padding: 6px 16px;
-    font-size: 2rem;
+  .box {
+    width: 14rem;
+    height: 14rem;
+    background-color: transparent;
+    background-size: cover;
+    position: relative;
+    top: 13rem;
+    transform-style: preserve-3d;
+    animation: animate 35s linear infinite;
+
   }
 
-  .topnav .fa-bars {
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+  }
+
+  .box span {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(370px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #00000038);
+
+  }
+
+  .box span img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border: 0.3rem solid #000;
+    border-radius: 0%;
+  }
+
+
+
+  section .H {
+    min-height: 20vh;
+    max-height: 60vh;
+    width: 80vw;
+    /* border: 2px solid black;*/
+    color: #333;
+    /*  background: #4caf50;*/
+
+    background-blend-mode: darken;
+    background-size: cover;
+    /****padding: 50% 10%;***/
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, 30rem);
+  }
+  
+  section hr{
+    border: none;
+  }
+
+  section h1 {
+    font-size: 3.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .topnav a.icon {
-    width: 4rem;
-  }
-
-  .topnav #mylinks a {
-    font-size: 2rem;
-  }
-
-  a.active {
-    letter-spacing: 4px;
-  }
-
-  #mylinks i {
-    font-size: 1.6rem;
-    padding-right: 8px;
-  }
-
-  /*---this is section----*/
-
-
-  section h1 {
-    font-size: 2.6rem;
-  }
-
-  section h5 span {
-    top: 70px;
-  }
-
   section h6 {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    font-size: 1.5rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
   }
 
   section h5 {
-    font-size: 1.3rem;
-    margin-top: 2px;
+    text-align: justify;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: sans-serif;
   }
 
-
-  /*----------this is footer-----------*/
-
-  /*
-
-.mobile-container .foot{
-  -webkit-text-stroke-width: 0.5px;
-  height: 2.5rem;
-  border-top: 1.5px solid black;
+  section h5 span {
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    position: absolute;
+    top: 12rem;
+    right: 0px;
   }
 
-.mobile-container .foot .copyright{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  section div.subscribe,
+  section div.install_apk {
+    width: 100%;
+    height: 13rem;
+    background-color: transparent;
+    transform: translate(0px, 15rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px transparent #fff;
+    border-radius: 1rem;
+    padding: 0 0 0rem 0;
+
+
   }
- .mobile-container .foot .s-links i{
-  margin: 0rem 1.2rem;
-  font-size: 1.5rem;
+
+  section div.subscribe div.logoYt,
+  section div.install_apk div.logoApk {
+    width: 9rem;
+    height: 9rem;
+    background: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
- .mobile-container .foot .copyright p{
-  font-size: 1.5rem;
+
+  section div.subscribe div.logoYt i,
+  section div.install_apk div.logoApk i {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 50%;
+    border: 5px solid #ff0000;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF0000;
+    transition: 0.5s;
   }
-  
-  */
+
+  /*************
+section div.subscribe div.logoYt i:hover, 
+section div.install_apk div.logoApk i:hover{
+  font-size: 4.5rem;
 }
+*****/
+  section div.subscribe a.sbs_button,
+  section div.install_apk a.install_btn {
+    width: 25rem;
+    height: 5rem;
+    background: #FF7979;
+    border: 5px solid #333;
+    font-size: 3rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #333;
+    cursor: pointer;
+    box-shadow: 1px 1px 22px #ff0000,
+      -1px 0px 22px #ff0000,
+      inset 1px 1px 22px #ff0000,
+      inset -1px -1px 22px #ff0000;
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  section div.subscribe a.sbs_button:hover,
+  section div.install_apk a.install_btn:hover {
+    color: #fff;
+    -webkit-text-stroke-color: #fff;
+    background-color: #333;
+    border-color: #fff;
+  }
+
+  section div.install_apk div.logoApk i {
+    color: #11C8FF;
+    border-color: #11C8FF;
+    font-size: 4.5rem;
+  }
+
+  section div.install_apk a.install_btn {
+    background-color: #77E0FF;
+    box-shadow: 1px 1px 22px #11C8FF,
+      -1px 0px 22px #11C8FF,
+      inset 1px 1px 22px #11C8FF,
+      inset -1px -1px 22px #11C8FF;
+  }
+
 
   .copyright {
     min-height: 5rem;
@@ -366,6 +461,427 @@ section h5 span {
     transition: 0.5s;
   }
 
+
+  .copyright .mediaIcons ul li a i:hover {
+    transform: translateY(-0.3rem);
+    -webkit-text-stroke-width: 0.02rem;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  .copyright .mediaIcons ul li a .fa-facebook-f:hover {
+    color: #015EE4;
+  }
+
+  .copyright .mediaIcons ul li a .fa-instagram:hover {
+    color: #DC1FA0;
+    -webkit-text-stroke-width: 0.015rem;
+  }
+
+  .copyright .mediaIcons ul li a .fa-twitter:hover {
+    color: #23A2FF;
+  }
+
+}
+
+/*******---media quiries---------768px----*****/
+
+
+@media (max-width:768px) {
+
+  html {
+    font-size: 70%;
+  }
+
+
+  .mobile-container {
+    max-width: 100%;
+    background: #555;
+    color: white;
+
+  }
+
+
+  .topnav {
+    overflow: hidden;
+    background: #333;
+    position: relative;
+  }
+
+
+  .topnav #mylinks {
+    display: none;
+  }
+
+  .topnav a,
+  .logo_svm {
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 4rem;
+    display: block;
+  }
+  
+  .topnav a{
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .topnav #mylinks a.login_btn {
+    background: #333;
+    padding: 8px 12px;
+    color: #ff0000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ff0000;
+    letter-spacing: 1.2px;
+    transition: 0.5s;
+  }
+
+  .topnav #mylinks a.login_btn:hover {
+    color: #fff;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #fff;
+    background: #ff0000;
+  }
+
+  .topnav a.icon {
+    background: #333;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 9rem;
+
+  }
+
+  .logo_svm {
+
+    background: #4caf50;
+    color: white;
+  }
+
+
+
+  .topnav a:hover {
+    background: #fff;
+    color: #333;
+  }
+
+  .topnav a.icon:hover {
+    background: #333;
+    color: #fff;
+  }
+
+  .logo_svm {
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: white;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4.1px;
+    font-size: 2rem;
+    padding: 6px 16px;
+  }
+
+  .topnav .fa-bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mylinks i {
+    font-size: 2.5rem;
+    padding-right: 1rem;
+  }
+
+  #mylinks a {
+    font-size: 3rem;
+  }
+
+  /********THIS__IS__SECTION**************/
+
+  section {
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 200vh;
+    display: flex;
+    flex-direction: column;
+    /****** justify-content: initial;*******/
+    align-items: center;
+    background: url('lap.jpeg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  section .box {
+    width: 10rem;
+    height: 10rem;
+    background-color: transparent;
+    background-size: cover;
+    position: relative;
+    top: 5rem;
+    transform-style: preserve-3d;
+    animation: animate 35s linear infinite;
+
+  }
+
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+  }
+
+  .box span {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(150px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #00000038);
+
+  }
+
+  .box span img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border: 0.25rem solid #000;
+    border-radius: 0%;
+  }
+
+
+  section .H {
+    height: 100vh;
+    /* border: 2px solid black;*/
+    color: #333;
+    /*  background: #4caf50;*/
+
+    padding: 50% 10%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section hr{
+    box-shadow: none;
+    border: none;
+  }
+
+  section h1 {
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section h6 {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+  }
+
+  section h5 {
+    text-align: justify;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  section h5 span {
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    position: absolute;
+    top: 200px;
+    right: 0px;
+  }
+
+  /****SUBSCRIBE___YT____&____INSTALL_______APK____ANDROID*******CODES*************/
+
+  section div.subscribe,
+  section div.install_apk {
+    width: 100%;
+    height: 8rem;
+    background-color: transparent;
+    transform: translate(0px, 9rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px transparent #fff;
+    padding: 0 0 0rem 0;
+
+
+  }
+
+  section div.subscribe div.logoYt,
+  section div.install_apk div.logoApk {
+    width: 4rem;
+    height: 4rem;
+    background: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section div.subscribe div.logoYt i,
+  section div.install_apk div.logoApk i {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid #ff0000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF0000;
+    transition: 0.5s;
+  }
+
+  /*************
+section div.subscribe div.logoYt i:hover, 
+section div.install_apk div.logoApk i:hover{
+  font-size: 4.5rem;
+}
+*****/
+  section div.subscribe a.sbs_button,
+  section div.install_apk a.install_btn {
+    width: 13rem;
+    height: 2.7rem;
+    background: #FF7979;
+    border: 2px solid #333;
+    font-size: 1.5rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    letter-spacing: 1.3px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333;
+    cursor: pointer;
+    box-shadow: 0.6px 0.6px 10px #ff0000,
+      -0.6px -0.6px 10px #ff0000,
+      inset 0.6px 0.6px 10px #ff0000,
+      inset -0.6px -0.6px 10px #ff0000;
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  section div.subscribe a.sbs_button:hover{
+    color: #fff;
+    -webkit-text-stroke-color: #FF5757;
+    -webkit-text-stroke-width: 0.2px;
+    background-color: #333;
+    border-color: #fff;
+  }
+
+  
+  section div.install_apk a.install_btn:hover {
+    color: #fff;
+    -webkit-text-stroke-color: #85FEFF;
+    -webkit-text-stroke-width: 0.3px;
+    background-color: #333;
+    border-color: #fff;
+  }
+
+  section div.install_apk div.logoApk i {
+    color: #11C8FF;
+    border-color: #11C8FF;
+    font-size: 2rem;
+  }
+
+  section div.install_apk a.install_btn {
+    background-color: #77E0FF;
+    box-shadow: 0.6px 0.6px 10px #11C8FF,
+      -0.6px -0.6px 10px #11C8FF,
+      inset 0.6px 0.6px 10px #11C8FF,
+      inset -0.6px -0.6px 10px #11C8FF;
+  }
+
+
+
+
+  /*----------this is footer-----------*/
+
+  .copyright {
+    min-height: 5rem;
+    max-height: 10rem;
+    min-width: 100vw;
+    max-width: 100vw;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+
+  .copyright p {
+    min-width: 10rem;
+    max-width: 100%;
+    min-height: 1.5rem;
+    max-height: 5rem;
+    background: transparent;
+    color: #fff;
+    font-size: .8rem;
+  }
+
+  .copyright p span {
+    color: goldenrod;
+  }
+
+
+
+  .copyright .mediaIcons {
+    min-height: 1rem;
+    max-height: 1.2rem;
+    min-width: 3rem;
+    max-width: 5rem;
+    background: transparent;
+    padding: 0.1rem 1rem;
+    transform: translateY(-0.2rem);
+  }
+
+  .copyright .mediaIcons ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .copyright .mediaIcons ul li {
+    list-style: none;
+    color: #fff;
+    padding: 0rem .3rem;
+  }
+
+
+  .copyright .mediaIcons ul li a {
+    color: #fff;
+  }
+
+  .copyright .mediaIcons ul li a i {
+    transition: 0.5s;
+  }
+
   .copyright .mediaIcons ul li a i:hover {
     transform: translateY(-0.3rem);
     -webkit-text-stroke-width: 0.02rem;
@@ -388,59 +904,54 @@ section h5 span {
 
 
 
-  /*-------second-media-query-for-width-320px--------*/
-
-  @media (min-width: 320px),
-  (max-width:767px) {
-    /*---this is section----*/
-
-
-    section h1 {
-      font-size: 2.2rem;
-    }
-
-    section h5 span {
-      top: 70px;
-    }
-
-    section h6 {
-      border-top: 0.8px solid black;
-      border-bottom: 0.8px solid black;
-      font-size: 1.3rem;
-    }
-
-    section h5 {
-      font-size: 1rem;
-      margin-top: 5px;
-    }
-
-    section hr {
-      display: none;
-    }
-
-    /*----------this is footer-----------*/
-
-    /*
-.mobile-container .foot{
-  -webkit-text-stroke-width: 0.3px;
-  height: 2.3rem;
-  border-top: 1.3px solid black;
+  /******SOME__CHANGES_____IN________ABOVE__CODES***************************************/
+  .topnav a {
+    padding: 6px 16px;
+    font-size: 2rem;
   }
 
-.mobile-container .foot .copyright{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .topnav .fa-bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
- .mobile-container .foot .s-links i{
-  margin: 0rem 1.1rem;
-  font-size: 1.3rem;
-  }
- .mobile-container .foot .copyright p{
-  font-size: 1.2rem;
-  }
-  
-  */
 
- }
- 
+  .topnav a.icon {
+    width: 4rem;
+  }
+
+  .topnav #mylinks a {
+    font-size: 2rem;
+  }
+
+  #mylinks i {
+    font-size: 1.6rem;
+    padding-right: 8px;
+  }
+
+  /********THIS__IS__SECTION**************/
+
+  section h1 {
+    font-size: 2.2rem;
+  }
+
+  section h5 span {
+    top: 70px;
+  }
+
+  section h6 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 1.3rem;
+  }
+
+  section h5 {
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+
+  /*----THIS___IS___FOOTER-----(COPYRIGHT)-----CODES _____AND___CHANGES----*/
+
+
+
+}
