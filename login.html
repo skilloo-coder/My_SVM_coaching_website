@@ -58,8 +58,8 @@ font-family: 'Sigmar One', cursive;
       font-size: 1.5rem;
       margin-top: 8px;
     }
-    
-    .form_group lable{
+
+    .form_group lable {
       font-family: 'Original Surfer', cursive;
       color: #333;
     }
@@ -97,8 +97,8 @@ font-family: 'Sigmar One', cursive;
     textarea {
       resize: vertical;
     }
-    
-    #section .anch{
+
+    #section .anch {
       pointer-events: none;
       text-decoration: none;
       color: #fff;
@@ -119,7 +119,7 @@ font-family: 'Sigmar One', cursive;
       background-color: #46F538;
       color: #000;
       pointer-events: all;
-      
+
     }
 
     #status.error {
@@ -188,7 +188,9 @@ font-family: 'Sigmar One', cursive;
           <button type="submit">submit</button>
       </form>
     </div>
-  <a href="https://bit.ly/3UuZJ7L" class="anch"> <div id="status"></div></a>
+    <a href="https://bit.ly/3UuZJ7L" class="anch">
+      <div id="status"></div>
+    </a>
   </section>
   <script>
     var form = document.getElementById("my-form");
@@ -197,7 +199,7 @@ font-family: 'Sigmar One', cursive;
       event.preventDefault();
       var status = document.getElementById("status");
       var section = document.getElementById("section");
-      
+
       var data = new FormData(event.target);
       fetch(event.target.action, {
         method: form.method,
@@ -207,16 +209,18 @@ font-family: 'Sigmar One', cursive;
         }
       }).then(response => {
         status.classList.add('success');
-        status.innerHTML = "success! click here for next";
-        section.style.pointerEvents="all";
-        
+        status.innerHTML = "success! click here for next ";
+        section.style.pointerEvents = "all";
+
         form.reset()
       }).catch(error => {
         status.classList.add('error');
-        status.innerHTML = "Oops! There was a problem submitting your form";
+        status.innerHTML = "Oops! There was a problem in submitting your form";
       });
     }
-    form.addEventListener("submit", handleSubmit)
+    form.addEventListener("submit", handleSubmit);
+
+
   </script>
 </body>
 
