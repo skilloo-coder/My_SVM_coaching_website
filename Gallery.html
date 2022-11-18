@@ -7,13 +7,38 @@
   <title>Gallery</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
-
+<!-----------------first---icon---kit--------------->
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  
+    <!----------second___icon__kit---------------->
+    <script src="https://<kit class=""></kit>fontawesome.com/2cc60cb60c.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
   <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/*****font-family: 'poppins',sans-serif;*****/
+
+  
+/*****************
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dosis:wght@500;700;800&family=Signika+Negative:wght@500&family=Sono:wght@500&display=swap');
+  ******/
+/*******##############📤📤📤###############******
+:::::::font::::families:::of::above::import::::
+
+font-family: 'Sono', sans-serif;
+
+font-family: 'Signika Negative', sans-serif;
+
+font-family: 'Dosis', sans-serif;
+
+font-family: 'Cormorant Garamond', serif;
+
+*****#############################********/
+
+  
     * {
       margin: 0;
       padding: 0;
@@ -35,13 +60,14 @@
     }
 
     .container {
-      display: inline-flex;
+      display: flex;
       list-style: none;
       align-items: center;
       /* background:rgb(76,175,80);*/
       background: #4caf50;
       background-blend-mode: darken;
-      border-bottom: 3px solid black;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
       width: 100vw;
       height: 2.8rem;
       position: sticky;
@@ -63,8 +89,11 @@
       padding-left: 1rem;
       color: #fff;
       letter-spacing: 4px;
-      font-family: sans-serif;
-    }
+      -webkit-text-stroke-width: 0.1rem;
+      -webkit-text-stroke-color: #fff;
+      font-family: 'poppins',sans-serif;
+      font-weight: 600;
+      }
 
     .menu {
       display: flex;
@@ -77,18 +106,18 @@
 
 
     .menu li a {
-      padding: .5rem .5rem;
+      padding: .5rem 2rem;
       transition: all 0.5s linear;
     }
 
     .menu li a:hover {
-      background: deepskyblue;
-      color: #626262;
+      background: #333;
+      color: #2FFFFB;
     }
 
     .container a {
       text-decoration: none;
-      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-width: 1px;
       color: #333;
     }
 
@@ -218,6 +247,12 @@
     .foot .s-links .fa-instagram {
       color: #E135F1;
     }
+    
+    .foot .s-links .fa-whatsapp {
+      color: darkgreen;
+      -webkit-text-stroke-color: darkgreen;
+      -webkit-text-stroke-width: 0.02rem;
+    }
 
     .foot .s-links .fa-twitter {
       color: #0087FF;
@@ -258,7 +293,8 @@
       }
 
       .container {
-        border-bottom: 2px solid black;
+        border-bottom: 0.5px solid black;
+        border-top: 0.5px solid black;
         height: 3.4rem;
       }
 
@@ -270,10 +306,14 @@
         letter-spacing: 0.5px;
         font-family: sans-serif;
       }
+      
+      .menu li a{
+        padding: .5rem .7rem;
+      }
 
       .menu li a:hover {
         border-radius: 10px;
-        color: #626262;
+        color: #2EFBDF;
       }
 
       /*------section--------*/
@@ -334,15 +374,17 @@
   </div>
 
   <nav class="container">
+    
     <div class="logo">
       <li><a href="index.html">MY SVM</a></li>
-
     </div>
+    
     <div class="menu">
       <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
       <li><span><a href="#"><i class="fa fa-image"></i>Gallery</a></span></li>
       <li><a href="mailto:sushiljaiswal61@gmail.com?subject=my problems&body=write your problems"><i class="fa fa-envelope"></i>Contact Us</a></li>
     </div>
+    
   </nav>
 
   <section class="main-section">
@@ -373,6 +415,7 @@
         <img src="sushil34.jpg">
         <img src="sushil35.jpg">
         <img src="sushil43.jpg">
+        <img src="v1.jpg" alt="Ayush-&-Sushil_Sir">
       </div>
 
       <div class="Images">
@@ -425,8 +468,9 @@
     <div class="s-links" style="font-size: 2rem;">
       <a href="https://bit.ly/Sushil_sir_fb" target="_ayush"><i class="fa fa-facebook"></i></a>
       <a href="https://bit.ly/Sushil_sir_insta" target="_ayush"><i class="fa fa-instagram"></i></a>
+      <a href="https://wa.me/+916203066030" target="_ayush"><i class="fa fa-whatsapp"></i></a>
       <a href="https://twitter.com/Ayush43173433?s=08" target="_ayush"><i class="fa fa-twitter"></i></a>
-      <a href="https://bit.ly/Sushil_sir_yt" target="_ayush"><i class="fa fa-youtube"></i></a>
+      <a href="https://bit.ly/Sushil_sir_yt" target="_ayush"><i class="fab fa-youtube"></i></a>
     </div>
     <center> copyright 2022 &copy; <span>MY S.V.M</span></center>
   </footer>
